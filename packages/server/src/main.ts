@@ -20,7 +20,6 @@ async function bootstrap() {
   const jwtSecret = await initJwt();
   global.jwtSecret = jwtSecret;
 
-
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.use(json({ limit: '50mb' }));
@@ -53,7 +52,9 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('VanBlog API Reference')
-    .setDescription('API Token 请在后台设置页面获取，请添加到请求头的 token 字段中进行鉴权。')
+    .setDescription(
+      'API Token 请在后台设置页面获取，请添加到请求头的 token 字段中进行鉴权。',
+    )
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
@@ -63,7 +64,6 @@ async function bootstrap() {
   const websiteProvider = app.get(WebsiteProvider);
 
   websiteProvider.init();
-
 
   const initProvider = app.get(InitProvider);
   initProvider.initVersion();
