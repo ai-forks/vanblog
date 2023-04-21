@@ -43,7 +43,6 @@ export class TokenController {
       data,
     };
   }
-
   @Delete('/:id')
   async deleteApiTokenByName(@Param('id') id: string) {
     if (config.demo && config.demo == 'true') {
