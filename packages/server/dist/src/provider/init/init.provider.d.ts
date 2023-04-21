@@ -1,0 +1,30 @@
+import { Logger } from '@nestjs/common';
+import { Model } from 'mongoose';
+import { InitDto } from 'src/types/init.dto';
+import { MetaDocument } from 'src/scheme/meta.schema';
+import { UserDocument } from 'src/scheme/user.schema';
+import { WalineProvider } from '../waline/waline.provider';
+import { SettingProvider } from '../setting/setting.provider';
+import { CacheProvider } from '../cache/cache.provider';
+import { WebsiteProvider } from '../website/website.provider';
+import { CategoryDocument } from 'src/scheme/category.schema';
+import { CustomPageDocument } from 'src/scheme/customPage.schema';
+export declare class InitProvider {
+    private metaModel;
+    private userModel;
+    private categoryModal;
+    private customPageModal;
+    private readonly walineProvider;
+    private readonly settingProvider;
+    private readonly cacheProvider;
+    private readonly websiteProvider;
+    logger: Logger;
+    constructor(metaModel: Model<MetaDocument>, userModel: Model<UserDocument>, categoryModal: Model<CategoryDocument>, customPageModal: Model<CustomPageDocument>, walineProvider: WalineProvider, settingProvider: SettingProvider, cacheProvider: CacheProvider, websiteProvider: WebsiteProvider);
+    init(initDto: InitDto): Promise<string>;
+    checkHasInited(): Promise<boolean>;
+    initRestoreKey(): Promise<void>;
+    washStaticSetting(): Promise<void>;
+    washCustomPage(): Promise<void>;
+    washCategory(): Promise<void>;
+    initVersion(): Promise<void>;
+}

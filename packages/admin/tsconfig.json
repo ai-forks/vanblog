@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
+    "strict": false,
+    "sourceMap": false,
+    "checkJs": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "composite": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   }
 }

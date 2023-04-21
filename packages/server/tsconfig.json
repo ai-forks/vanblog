@@ -13,17 +13,17 @@
     "baseUrl": "./",
     // "rootDir": "./src",
     "incremental": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "strictNullChecks": false,
+    "strict": false,
+    "checkJs": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": false,
     "composite": true,
     "paths": {
-      "mongoose": [
-        "./node_modules/mongoose"
-      ],
+      "mongoose": ["./node_modules/mongoose"]
     }
   }
 }
