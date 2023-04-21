@@ -27,4 +27,3 @@ function wordCount(Words) {
     return iTotal + eTotal;
 }
 exports.wordCount = wordCount;
-//# sourceMappingURL=wordCount.js.map

@@ -48,4 +48,3 @@ ViewerTask = ViewerTask_1 = __decorate([
         viewer_provider_1.ViewerProvider])
 ], ViewerTask);
 exports.ViewerTask = ViewerTask;
-//# sourceMappingURL=viewer.task.js.map

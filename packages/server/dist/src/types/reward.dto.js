@@ -14,4 +14,3 @@ class RewardDto {
     }
 }
 exports.RewardDto = RewardDto;
-//# sourceMappingURL=reward.dto.js.map

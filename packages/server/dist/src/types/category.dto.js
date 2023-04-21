@@ -14,4 +14,3 @@ class UpdateCategoryDto {
     }
 }
 exports.UpdateCategoryDto = UpdateCategoryDto;
-//# sourceMappingURL=category.dto.js.map

@@ -20,4 +20,3 @@ class StaticSetting {
     }
 }
 exports.StaticSetting = StaticSetting;
-//# sourceMappingURL=setting.dto.js.map

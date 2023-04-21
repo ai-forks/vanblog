@@ -33,4 +33,3 @@ AppController = __decorate([
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;
-//# sourceMappingURL=app.controller.js.map

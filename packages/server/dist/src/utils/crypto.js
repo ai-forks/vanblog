@@ -48,4 +48,3 @@ function encryptFileMD5(buffer) {
     return md5.update(buffer).digest('hex');
 }
 exports.encryptFileMD5 = encryptFileMD5;
-//# sourceMappingURL=crypto.js.map

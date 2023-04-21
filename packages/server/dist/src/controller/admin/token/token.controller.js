@@ -89,4 +89,3 @@ TokenController = __decorate([
     __metadata("design:paramtypes", [token_provider_1.TokenProvider])
 ], TokenController);
 exports.TokenController = TokenController;
-//# sourceMappingURL=token.controller.js.map

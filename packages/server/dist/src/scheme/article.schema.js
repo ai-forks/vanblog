@@ -105,4 +105,3 @@ Article = __decorate([
 ], Article);
 exports.Article = Article;
 exports.ArticleSchema = mongoose_1.SchemaFactory.createForClass(Article);
-//# sourceMappingURL=article.schema.js.map

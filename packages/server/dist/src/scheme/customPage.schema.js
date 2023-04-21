@@ -57,4 +57,3 @@ CustomPage = __decorate([
 ], CustomPage);
 exports.CustomPage = CustomPage;
 exports.CustomPageSchema = mongoose_1.SchemaFactory.createForClass(CustomPage);
-//# sourceMappingURL=customPage.schema.js.map

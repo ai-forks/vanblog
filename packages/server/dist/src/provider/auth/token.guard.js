@@ -36,4 +36,3 @@ TokenGuard = TokenGuard_1 = __decorate([
     __metadata("design:paramtypes", [token_provider_1.TokenProvider])
 ], TokenGuard);
 exports.TokenGuard = TokenGuard;
-//# sourceMappingURL=token.guard.js.map

@@ -239,4 +239,3 @@ DraftProvider = __decorate([
         article_provider_1.ArticleProvider])
 ], DraftProvider);
 exports.DraftProvider = DraftProvider;
-//# sourceMappingURL=draft.provider.js.map

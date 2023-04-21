@@ -143,4 +143,3 @@ ViewerProvider = __decorate([
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], ViewerProvider);
 exports.ViewerProvider = ViewerProvider;
-//# sourceMappingURL=viewer.provider.js.map

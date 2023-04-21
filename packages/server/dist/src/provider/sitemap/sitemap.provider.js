@@ -113,4 +113,3 @@ SiteMapProvider = SiteMapProvider_1 = __decorate([
         meta_provider_1.MetaProvider])
 ], SiteMapProvider);
 exports.SiteMapProvider = SiteMapProvider;
-//# sourceMappingURL=sitemap.provider.js.map

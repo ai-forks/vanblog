@@ -77,4 +77,3 @@ Pipeline = __decorate([
 ], Pipeline);
 exports.Pipeline = Pipeline;
 exports.PipelineSchema = mongoose_1.SchemaFactory.createForClass(Pipeline);
-//# sourceMappingURL=pipeline.schema.js.map

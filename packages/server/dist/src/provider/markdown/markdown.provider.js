@@ -62,4 +62,3 @@ MarkdownProvider = MarkdownProvider_1 = __decorate([
     __metadata("design:paramtypes", [])
 ], MarkdownProvider);
 exports.MarkdownProvider = MarkdownProvider;
-//# sourceMappingURL=markdown.provider.js.map

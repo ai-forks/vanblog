@@ -280,4 +280,3 @@ MetaProvider = MetaProvider_1 = __decorate([
         article_provider_1.ArticleProvider])
 ], MetaProvider);
 exports.MetaProvider = MetaProvider;
-//# sourceMappingURL=meta.provider.js.map

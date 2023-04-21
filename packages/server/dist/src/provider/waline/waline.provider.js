@@ -162,4 +162,3 @@ WalineProvider = WalineProvider_1 = __decorate([
         setting_provider_1.SettingProvider])
 ], WalineProvider);
 exports.WalineProvider = WalineProvider;
-//# sourceMappingURL=waline.provider.js.map

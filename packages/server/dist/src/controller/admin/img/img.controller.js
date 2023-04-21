@@ -173,4 +173,3 @@ ImgController = __decorate([
     __metadata("design:paramtypes", [static_provider_1.StaticProvider])
 ], ImgController);
 exports.ImgController = ImgController;
-//# sourceMappingURL=img.controller.js.map

@@ -80,4 +80,3 @@ const isIpv4 = (ip) => {
     return reg.test(ip);
 };
 exports.isIpv4 = isIpv4;
-//# sourceMappingURL=ip.js.map

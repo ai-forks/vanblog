@@ -19,4 +19,3 @@ const sortArticle = (data, sortKey, sortDesc) => {
     });
 };
 exports.sortArticle = sortArticle;
-//# sourceMappingURL=sortArticle.js.map

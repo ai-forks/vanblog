@@ -27,7 +27,12 @@ export class LogProvider {
     this.logger = pino({ level: 'debug' }, pino.multistream(streams));
     this.logger.info({ event: 'start' });
   }
-  async runPipeline(pipeline: Pipeline, input: any,result?:CodeResult, error?: Error) {
+  async runPipeline(
+    pipeline: Pipeline,
+    input: any,
+    result?: CodeResult,
+    error?: Error,
+  ) {
     this.logger.info({
       event: EventType.RUN_PIPELINE,
       pipelineId: pipeline.id,
@@ -38,7 +43,7 @@ export class LogProvider {
       output: result?.output || [],
       serverError: error?.message || '',
       input,
-    })
+    });
   }
   async login(req: Request, success: boolean) {
     const logger = this.logger;

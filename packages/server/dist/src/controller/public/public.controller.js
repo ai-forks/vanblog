@@ -291,4 +291,3 @@ PublicController = __decorate([
         customPage_provider_1.CustomPageProvider])
 ], PublicController);
 exports.PublicController = PublicController;
-//# sourceMappingURL=public.controller.js.map

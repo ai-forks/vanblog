@@ -46,4 +46,3 @@ CustomPageProvider = __decorate([
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], CustomPageProvider);
 exports.CustomPageProvider = CustomPageProvider;
-//# sourceMappingURL=customPage.provider.js.map

@@ -180,4 +180,3 @@ BackupController = BackupController_1 = __decorate([
         static_provider_1.StaticProvider])
 ], BackupController);
 exports.BackupController = BackupController;
-//# sourceMappingURL=backup.controller.js.map

@@ -105,4 +105,3 @@ async function bootstrap() {
     }, 3000);
 }
 bootstrap();
-//# sourceMappingURL=main.js.map

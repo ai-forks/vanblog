@@ -8,4 +8,3 @@ class AboutDto {
     }
 }
 exports.AboutDto = AboutDto;
-//# sourceMappingURL=about.dto.js.map

@@ -20,4 +20,3 @@ class SearchArticleOption {
     }
 }
 exports.SearchArticleOption = SearchArticleOption;
-//# sourceMappingURL=article.dto.js.map

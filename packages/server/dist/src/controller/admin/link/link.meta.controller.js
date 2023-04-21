@@ -117,4 +117,3 @@ LinkMetaController = __decorate([
         isr_provider_1.ISRProvider])
 ], LinkMetaController);
 exports.LinkMetaController = LinkMetaController;
-//# sourceMappingURL=link.meta.controller.js.map

@@ -52,4 +52,3 @@ Token = __decorate([
 ], Token);
 exports.Token = Token;
 exports.TokenSchema = mongoose_1.SchemaFactory.createForClass(Token);
-//# sourceMappingURL=token.schema.js.map

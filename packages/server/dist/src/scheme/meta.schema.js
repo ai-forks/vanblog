@@ -67,4 +67,3 @@ Meta = __decorate([
 ], Meta);
 exports.Meta = Meta;
 exports.MetaSchema = mongoose_1.SchemaFactory.createForClass(Meta);
-//# sourceMappingURL=meta.schema.js.map

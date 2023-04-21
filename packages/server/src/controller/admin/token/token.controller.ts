@@ -18,9 +18,7 @@ import { ApiToken } from 'src/provider/swagger/token';
 @ApiToken
 @Controller('/api/admin/token/')
 export class TokenController {
-  constructor(
-    private readonly tokenProvider: TokenProvider,
-  ) {}
+  constructor(private readonly tokenProvider: TokenProvider) {}
 
   @Get('')
   async getAllApiTokens() {
@@ -32,7 +30,7 @@ export class TokenController {
   }
 
   @Post()
-  async createApiToken(@Body() body: {name: string}) {
+  async createApiToken(@Body() body: { name: string }) {
     if (config.demo && config.demo == 'true') {
       return {
         statusCode: 401,

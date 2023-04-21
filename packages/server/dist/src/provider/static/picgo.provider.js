@@ -120,4 +120,3 @@ PicgoProvider = PicgoProvider_1 = __decorate([
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], PicgoProvider);
 exports.PicgoProvider = PicgoProvider;
-//# sourceMappingURL=picgo.provider.js.map

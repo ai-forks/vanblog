@@ -26,4 +26,3 @@ class SearchDraftOption {
     }
 }
 exports.SearchDraftOption = SearchDraftOption;
-//# sourceMappingURL=draft.dto.js.map

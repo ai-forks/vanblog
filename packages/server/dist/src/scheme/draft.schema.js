@@ -69,4 +69,3 @@ Draft = __decorate([
 ], Draft);
 exports.Draft = Draft;
 exports.DraftSchema = mongoose_1.SchemaFactory.createForClass(Draft);
-//# sourceMappingURL=draft.schema.js.map

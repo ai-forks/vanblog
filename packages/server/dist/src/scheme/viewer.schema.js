@@ -44,4 +44,3 @@ Viewer = __decorate([
 ], Viewer);
 exports.Viewer = Viewer;
 exports.ViewerSchema = mongoose_1.SchemaFactory.createForClass(Viewer);
-//# sourceMappingURL=viewer.schema.js.map

@@ -60,4 +60,3 @@ Static = __decorate([
 ], Static);
 exports.Static = Static;
 exports.StaticSchema = mongoose_1.SchemaFactory.createForClass(Static);
-//# sourceMappingURL=static.schema.js.map

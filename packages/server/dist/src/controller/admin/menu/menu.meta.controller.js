@@ -72,4 +72,3 @@ MenuMetaController = __decorate([
         isr_provider_1.ISRProvider])
 ], MenuMetaController);
 exports.MenuMetaController = MenuMetaController;
-//# sourceMappingURL=menu.meta.controller.js.map

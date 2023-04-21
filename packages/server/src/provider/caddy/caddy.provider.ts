@@ -53,11 +53,12 @@ export class CaddyProvider {
     } else {
       try {
         await axios.post(
-          'http://127.0.0.1:2019/config/apps/http/servers/srv1/listener_wrappers',[
+          'http://127.0.0.1:2019/config/apps/http/servers/srv1/listener_wrappers',
+          [
             {
-              "wrapper": "http_redirect"
-            }
-          ]
+              wrapper: 'http_redirect',
+            },
+          ],
         );
         this.logger.log('https 自动重定向已关闭');
         return '开启成功！';

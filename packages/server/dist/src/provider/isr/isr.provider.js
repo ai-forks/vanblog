@@ -57,7 +57,7 @@ let ISRProvider = ISRProvider_1 = class ISRProvider {
         this.logger.log('触发全量渲染完成！');
     }
     async activeAll(info, delay, activeConfig) {
-        if (process.env["VANBLOG_DISABLE_WEBSITE"] === 'true') {
+        if (process.env['VANBLOG_DISABLE_WEBSITE'] === 'true') {
             return;
         }
         if (this.timer) {
@@ -205,4 +205,3 @@ ISRProvider = ISRProvider_1 = __decorate([
         setting_provider_1.SettingProvider])
 ], ISRProvider);
 exports.ISRProvider = ISRProvider;
-//# sourceMappingURL=isr.provider.js.map

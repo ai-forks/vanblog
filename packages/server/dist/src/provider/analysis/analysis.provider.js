@@ -118,4 +118,3 @@ AnalysisProvider = __decorate([
         category_provider_1.CategoryProvider])
 ], AnalysisProvider);
 exports.AnalysisProvider = AnalysisProvider;
-//# sourceMappingURL=analysis.provider.js.map

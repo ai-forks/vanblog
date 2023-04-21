@@ -14,4 +14,3 @@ class UpdatePipelineDto {
     }
 }
 exports.UpdatePipelineDto = UpdatePipelineDto;
-//# sourceMappingURL=pipeline.dto.js.map

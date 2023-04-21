@@ -84,4 +84,3 @@ ISRController = __decorate([
         website_provider_1.WebsiteProvider])
 ], ISRController);
 exports.ISRController = ISRController;
-//# sourceMappingURL=isr.controller.js.map

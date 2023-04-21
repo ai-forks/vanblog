@@ -9,4 +9,3 @@ const copyDocObj = (oldObj) => {
     return newObj;
 };
 exports.copyDocObj = copyDocObj;
-//# sourceMappingURL=objCopy.js.map

@@ -11,7 +11,7 @@ export interface Config {
 }
 
 export const loadMongoUrl = () => {
-return loadConfig('database.url', () => {
+  return loadConfig('database.url', () => {
     const db = {
       host: loadConfig('database.host', 'mongo'),
       port: loadConfig('database.port', '27017'),
@@ -26,8 +26,8 @@ return loadConfig('database.url', () => {
       authInfo = `${db.user}:${db.passwd}@`;
 
     return `mongodb://${authInfo}${db.host}:${db.port}/${db.name}?authSource=admin`;
-  })
-}
+  });
+};
 
 export const config: Config = {
   mongoUrl: loadMongoUrl(),

@@ -31,4 +31,3 @@ Setting = __decorate([
 ], Setting);
 exports.Setting = Setting;
 exports.SettingSchema = mongoose_1.SchemaFactory.createForClass(Setting);
-//# sourceMappingURL=setting.schema.js.map

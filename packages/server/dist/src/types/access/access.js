@@ -38,4 +38,3 @@ exports.publicRoutes = [
     'post-/api/admin/img/upload',
     'post-/api/admin/article/searchByLink',
 ];
-//# sourceMappingURL=access.js.map

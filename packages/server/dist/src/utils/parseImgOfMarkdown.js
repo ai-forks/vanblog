@@ -17,4 +17,3 @@ const parseImgLinksOfMarkdown = (content) => {
     return res;
 };
 exports.parseImgLinksOfMarkdown = parseImgLinksOfMarkdown;
-//# sourceMappingURL=parseImgOfMarkdown.js.map

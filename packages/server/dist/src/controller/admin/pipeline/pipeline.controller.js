@@ -144,4 +144,3 @@ PipelineController = __decorate([
     __metadata("design:paramtypes", [pipeline_provider_1.PipelineProvider])
 ], PipelineController);
 exports.PipelineController = PipelineController;
-//# sourceMappingURL=pipeline.controller.js.map

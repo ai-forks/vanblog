@@ -59,4 +59,3 @@ MetaController = __decorate([
     __metadata("design:paramtypes", [meta_provider_1.MetaProvider])
 ], MetaController);
 exports.MetaController = MetaController;
-//# sourceMappingURL=meta.controller.js.map

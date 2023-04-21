@@ -65,4 +65,3 @@ const loadConfig = (key, defaultValue) => {
 };
 exports.loadConfig = loadConfig;
 exports.version = process.env['VAN_BLOG_VERSION'] || 'dev';
-//# sourceMappingURL=loadConfig.js.map

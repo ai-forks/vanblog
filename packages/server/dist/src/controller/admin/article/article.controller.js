@@ -95,7 +95,7 @@ let ArticleController = class ArticleController {
         if (!createDto.author) {
             createDto.author = author;
         }
-        const result = await this.pipelineProvider.dispatchEvent("beforeUpdateArticle", createDto);
+        const result = await this.pipelineProvider.dispatchEvent('beforeUpdateArticle', createDto);
         if (result.length > 0) {
             const lastResult = result[result.length - 1];
             const lastOuput = lastResult.output;
@@ -107,7 +107,7 @@ let ArticleController = class ArticleController {
         this.isrProvider.activeAll('创建文章触发增量渲染！', undefined, {
             postId: data.id,
         });
-        this.pipelineProvider.dispatchEvent("afterUpdateArticle", data);
+        this.pipelineProvider.dispatchEvent('afterUpdateArticle', data);
         return {
             statusCode: 200,
             data,
@@ -125,7 +125,7 @@ let ArticleController = class ArticleController {
             return { statusCode: 401, message: '演示站禁止删除文章！' };
         }
         const toDeleteArticle = await this.articleProvider.getById(id, 'admin');
-        this.pipelineProvider.dispatchEvent("deleteArticle", toDeleteArticle);
+        this.pipelineProvider.dispatchEvent('deleteArticle', toDeleteArticle);
         const data = await this.articleProvider.deleteById(id);
         this.isrProvider.activeAll('删除文章触发增量渲染！', undefined, {
             postId: id,
@@ -207,4 +207,3 @@ ArticleController = __decorate([
         pipeline_provider_1.PipelineProvider])
 ], ArticleController);
 exports.ArticleController = ArticleController;
-//# sourceMappingURL=article.controller.js.map

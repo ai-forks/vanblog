@@ -8,4 +8,3 @@ class createViewerDto {
     }
 }
 exports.createViewerDto = createViewerDto;
-//# sourceMappingURL=viewer.dto.js.map

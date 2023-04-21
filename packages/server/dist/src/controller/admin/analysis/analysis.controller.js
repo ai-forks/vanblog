@@ -50,4 +50,3 @@ AnalysisController = __decorate([
     __metadata("design:paramtypes", [analysis_provider_1.AnalysisProvider])
 ], AnalysisController);
 exports.AnalysisController = AnalysisController;
-//# sourceMappingURL=analysis.controller.js.map

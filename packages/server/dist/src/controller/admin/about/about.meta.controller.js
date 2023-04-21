@@ -72,4 +72,3 @@ AboutMetaController = __decorate([
         isr_provider_1.ISRProvider])
 ], AboutMetaController);
 exports.AboutMetaController = AboutMetaController;
-//# sourceMappingURL=about.meta.controller.js.map

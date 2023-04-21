@@ -139,4 +139,3 @@ RssProvider = RssProvider_1 = __decorate([
         markdown_provider_1.MarkdownProvider])
 ], RssProvider);
 exports.RssProvider = RssProvider;
-//# sourceMappingURL=rss.provider.js.map

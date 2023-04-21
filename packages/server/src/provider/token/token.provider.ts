@@ -16,10 +16,11 @@ export class TokenProvider {
     private readonly settingProvider: SettingProvider,
   ) {}
 
-
   async getAllAPIToken() {
     this.logger.log(`获取所有 API Token`);
-    return await this.tokenModel.find({ userId: 666666 ,disabled:false}).exec();
+    return await this.tokenModel
+      .find({ userId: 666666, disabled: false })
+      .exec();
   }
 
   async disableAPIToken(token: string) {
@@ -35,16 +36,19 @@ export class TokenProvider {
   async createAPIToken(name: string) {
     this.logger.log(`创建 API Token`);
     // 100年过期
-    const expiresIn = 3600*24*365*100;
-    const token = this.jwtService.sign({
-      sub: 0,
-      username: name,
-      role: 'admin',
-    }, {
-      expiresIn,
-    });
+    const expiresIn = 3600 * 24 * 365 * 100;
+    const token = this.jwtService.sign(
+      {
+        sub: 0,
+        username: name,
+        role: 'admin',
+      },
+      {
+        expiresIn,
+      },
+    );
     // 默认666666是 api token
-    this.tokenModel.create({ userId: 666666,name, token, expiresIn });
+    this.tokenModel.create({ userId: 666666, name, token, expiresIn });
     return token;
   }
 

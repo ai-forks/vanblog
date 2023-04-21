@@ -19,4 +19,3 @@ const encodeQuerystring = (s) => {
     return s.replace(/#/g, '%23').replace(/\//g, '%2F');
 };
 exports.encodeQuerystring = encodeQuerystring;
-//# sourceMappingURL=washUrl.js.map

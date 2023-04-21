@@ -187,4 +187,3 @@ SettingController = __decorate([
         isr_provider_1.ISRProvider])
 ], SettingController);
 exports.SettingController = SettingController;
-//# sourceMappingURL=setting.controller.js.map

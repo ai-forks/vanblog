@@ -15,4 +15,3 @@ const compressImgToWebp = async (srcImage) => {
     return f;
 };
 exports.compressImgToWebp = compressImgToWebp;
-//# sourceMappingURL=webp.js.map

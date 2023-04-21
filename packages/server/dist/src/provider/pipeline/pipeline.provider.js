@@ -41,7 +41,7 @@ let PipelineProvider = PipelineProvider_1 = class PipelineProvider {
         return false;
     }
     async checkAllDeps() {
-        this.logger.log("初始化流水线代码库，这可能需要一段时间");
+        this.logger.log('初始化流水线代码库，这可能需要一段时间');
         const pipelines = await this.getAll();
         const deps = [];
         for (const pipeline of pipelines) {
@@ -169,7 +169,7 @@ let PipelineProvider = PipelineProvider_1 = class PipelineProvider {
             });
         });
         try {
-            const result = await run;
+            const result = (await run);
             this.logger.log(`[${traceId}]运行流水线成功: ${id} ${JSON.stringify(result, null, 2)}`);
             this.logProvider.runPipeline(pipeline, data, result);
             return result;
@@ -183,10 +183,10 @@ let PipelineProvider = PipelineProvider_1 = class PipelineProvider {
     async addDeps(deps) {
         for (const dep of deps) {
             try {
-                const r = (0, child_process_1.spawnSync)(`pnpm`, ["add", dep], {
+                const r = (0, child_process_1.spawnSync)(`pnpm`, ['add', dep], {
                     cwd: this.runnerPath,
                     shell: process.platform === 'win32',
-                    env: Object.assign({}, process.env)
+                    env: Object.assign({}, process.env),
                 });
                 console.log(r.output.toString());
             }
@@ -250,4 +250,3 @@ PipelineProvider = PipelineProvider_1 = __decorate([
         log_provider_1.LogProvider])
 ], PipelineProvider);
 exports.PipelineProvider = PipelineProvider;
-//# sourceMappingURL=pipeline.provider.js.map

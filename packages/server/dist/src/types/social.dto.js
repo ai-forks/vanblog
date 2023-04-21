@@ -14,4 +14,3 @@ class SocialDto {
     }
 }
 exports.SocialDto = SocialDto;
-//# sourceMappingURL=social.dto.js.map

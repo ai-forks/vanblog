@@ -889,4 +889,3 @@ ArticleProvider = __decorate([
         visit_provider_1.VisitProvider])
 ], ArticleProvider);
 exports.ArticleProvider = ArticleProvider;
-//# sourceMappingURL=article.provider.js.map

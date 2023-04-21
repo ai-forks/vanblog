@@ -89,8 +89,8 @@ let CaddyProvider = CaddyProvider_1 = class CaddyProvider {
             try {
                 await axios_1.default.post('http://127.0.0.1:2019/config/apps/http/servers/srv1/listener_wrappers', [
                     {
-                        "wrapper": "http_redirect"
-                    }
+                        wrapper: 'http_redirect',
+                    },
                 ]);
                 this.logger.log('https 自动重定向已关闭');
                 return '开启成功！';
@@ -171,4 +171,3 @@ CaddyProvider = CaddyProvider_1 = __decorate([
     __metadata("design:paramtypes", [setting_provider_1.SettingProvider])
 ], CaddyProvider);
 exports.CaddyProvider = CaddyProvider;
-//# sourceMappingURL=caddy.provider.js.map

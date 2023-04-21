@@ -11,4 +11,3 @@ const checkTrue = (s) => {
     return false;
 };
 exports.checkTrue = checkTrue;
-//# sourceMappingURL=checkTrue.js.map

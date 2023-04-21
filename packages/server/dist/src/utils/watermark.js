@@ -31,4 +31,3 @@ const generateWaterMark = async (waterMark) => {
     return logo;
 };
 exports.generateWaterMark = generateWaterMark;
-//# sourceMappingURL=watermark.js.map

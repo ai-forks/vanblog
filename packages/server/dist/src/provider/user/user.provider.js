@@ -134,4 +134,3 @@ UserProvider = UserProvider_1 = __decorate([
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], UserProvider);
 exports.UserProvider = UserProvider;
-//# sourceMappingURL=user.provider.js.map

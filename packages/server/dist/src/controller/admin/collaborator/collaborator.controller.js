@@ -139,4 +139,3 @@ CollaboratorController = __decorate([
         token_provider_1.TokenProvider])
 ], CollaboratorController);
 exports.CollaboratorController = CollaboratorController;
-//# sourceMappingURL=collaborator.controller.js.map

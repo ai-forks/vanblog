@@ -52,4 +52,3 @@ Visit = __decorate([
 ], Visit);
 exports.Visit = Visit;
 exports.VisitSchema = mongoose_1.SchemaFactory.createForClass(Visit);
-//# sourceMappingURL=visit.schema.js.map

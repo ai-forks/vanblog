@@ -6,4 +6,3 @@ const rmDir = (p) => {
     (0, child_process_1.execSync)(`rm -rf ${p}`);
 };
 exports.rmDir = rmDir;
-//# sourceMappingURL=deleteFolder.js.map

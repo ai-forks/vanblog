@@ -35,7 +35,7 @@ let SettingProvider = SettingProvider_1 = class SettingProvider {
             .findOne({ type: 'static' })
             .exec());
         if (res) {
-            return ((res === null || res === void 0 ? void 0 : res.value) || setting_dto_1.defaultStaticSetting);
+            return (res === null || res === void 0 ? void 0 : res.value) || setting_dto_1.defaultStaticSetting;
         }
         else {
             await this.settingModel.create({
@@ -263,4 +263,3 @@ SettingProvider = SettingProvider_1 = __decorate([
         meta_provider_1.MetaProvider])
 ], SettingProvider);
 exports.SettingProvider = SettingProvider;
-//# sourceMappingURL=setting.provider.js.map

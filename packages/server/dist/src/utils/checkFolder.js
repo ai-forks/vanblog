@@ -58,4 +58,3 @@ const checkOrCreateByFilePath = (p) => {
     }
 };
 exports.checkOrCreateByFilePath = checkOrCreateByFilePath;
-//# sourceMappingURL=checkFolder.js.map

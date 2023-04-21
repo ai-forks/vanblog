@@ -1,4 +1,14 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Req, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/provider/auth/auth.guard';
 import { Request } from 'express';
@@ -39,7 +49,9 @@ export class PipelineController {
   }
   @Post()
   async createPipeline(@Body() createPipelineDto: CreatePipelineDto) {
-    const pipeline = await this.pipelineProvider.createPipeline(createPipelineDto);
+    const pipeline = await this.pipelineProvider.createPipeline(
+      createPipelineDto,
+    );
     return {
       statusCode: 200,
       data: pipeline,
@@ -55,18 +67,30 @@ export class PipelineController {
     };
   }
   @Put('/:id')
-  async updatePipelineById(@Param('id') idString: string, @Body() updatePipelineDto: CreatePipelineDto) {
+  async updatePipelineById(
+    @Param('id') idString: string,
+    @Body() updatePipelineDto: CreatePipelineDto,
+  ) {
     const id = parseInt(idString);
-    const pipeline = await this.pipelineProvider.updatePipelineById(id, updatePipelineDto);
+    const pipeline = await this.pipelineProvider.updatePipelineById(
+      id,
+      updatePipelineDto,
+    );
     return {
       statusCode: 200,
       data: pipeline,
     };
   }
   @Post('/trigger/:id')
-  async triggerPipelineById(@Param('id') idString: string, @Body() triggerDto: {input?: any}) {
+  async triggerPipelineById(
+    @Param('id') idString: string,
+    @Body() triggerDto: { input?: any },
+  ) {
     const id = parseInt(idString);
-    const result = await this.pipelineProvider.triggerById(id,triggerDto.input);
+    const result = await this.pipelineProvider.triggerById(
+      id,
+      triggerDto.input,
+    );
     return {
       statusCode: 200,
       data: result,

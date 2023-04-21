@@ -22,4 +22,3 @@ function removeID(objArr) {
     });
 }
 exports.removeID = removeID;
-//# sourceMappingURL=removeId.js.map

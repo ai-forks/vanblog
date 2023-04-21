@@ -17,4 +17,3 @@ AppService = __decorate([
     (0, common_1.Injectable)()
 ], AppService);
 exports.AppService = AppService;
-//# sourceMappingURL=app.service.js.map

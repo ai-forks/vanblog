@@ -84,4 +84,3 @@ SiteMetaController = __decorate([
         pipeline_provider_1.PipelineProvider])
 ], SiteMetaController);
 exports.SiteMetaController = SiteMetaController;
-//# sourceMappingURL=site.meta.controller.js.map

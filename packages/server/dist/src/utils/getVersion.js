@@ -22,4 +22,3 @@ const getVersionFromServer = async () => {
     }
 };
 exports.getVersionFromServer = getVersionFromServer;
-//# sourceMappingURL=getVersion.js.map

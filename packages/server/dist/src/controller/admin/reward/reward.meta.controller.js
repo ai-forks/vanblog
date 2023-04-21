@@ -117,4 +117,3 @@ RewardMetaController = __decorate([
         isr_provider_1.ISRProvider])
 ], RewardMetaController);
 exports.RewardMetaController = RewardMetaController;
-//# sourceMappingURL=reward.meta.controller.js.map

@@ -69,4 +69,3 @@ AuthProvider = __decorate([
         token_provider_1.TokenProvider])
 ], AuthProvider);
 exports.AuthProvider = AuthProvider;
-//# sourceMappingURL=auth.provider.js.map

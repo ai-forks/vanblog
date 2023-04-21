@@ -37,4 +37,3 @@ const checkOrCreateFile = (p) => {
     }
 };
 exports.checkOrCreateFile = checkOrCreateFile;
-//# sourceMappingURL=checkFile.js.map

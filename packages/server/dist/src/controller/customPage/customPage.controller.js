@@ -101,4 +101,3 @@ PublicOldCustomPageRedirectController = __decorate([
     (0, common_1.Controller)('custom')
 ], PublicOldCustomPageRedirectController);
 exports.PublicOldCustomPageRedirectController = PublicOldCustomPageRedirectController;
-//# sourceMappingURL=customPage.controller.js.map

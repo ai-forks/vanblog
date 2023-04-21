@@ -47,4 +47,3 @@ Category = __decorate([
 ], Category);
 exports.Category = Category;
 exports.CategorySchema = mongoose_1.SchemaFactory.createForClass(Category);
-//# sourceMappingURL=category.schema.js.map

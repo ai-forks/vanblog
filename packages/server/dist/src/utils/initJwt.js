@@ -9,16 +9,15 @@ const initJwt = async () => {
     const client = new mongodb_1.MongoClient(mongoUrl);
     await client.connect();
     const db = client.db();
-    const collection = db.collection("settings");
-    const jwtSetting = await collection.findOne({ type: "jwt" });
+    const collection = db.collection('settings');
+    const jwtSetting = await collection.findOne({ type: 'jwt' });
     if (jwtSetting) {
         return jwtSetting.value.secret;
     }
     else {
         const secret = (0, crypto_1.makeSalt)();
-        await collection.insertOne({ type: "jwt", value: { secret } });
+        await collection.insertOne({ type: 'jwt', value: { secret } });
         return secret;
     }
 };
 exports.initJwt = initJwt;
-//# sourceMappingURL=initJwt.js.map

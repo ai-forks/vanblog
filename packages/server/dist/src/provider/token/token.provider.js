@@ -29,7 +29,9 @@ let TokenProvider = TokenProvider_1 = class TokenProvider {
     }
     async getAllAPIToken() {
         this.logger.log(`获取所有 API Token`);
-        return await this.tokenModel.find({ userId: 666666, disabled: false }).exec();
+        return await this.tokenModel
+            .find({ userId: 666666, disabled: false })
+            .exec();
     }
     async disableAPIToken(token) {
         return await this.tokenModel.updateOne({ token }, { disabled: true });
@@ -94,4 +96,3 @@ TokenProvider = TokenProvider_1 = __decorate([
         setting_provider_1.SettingProvider])
 ], TokenProvider);
 exports.TokenProvider = TokenProvider;
-//# sourceMappingURL=token.provider.js.map

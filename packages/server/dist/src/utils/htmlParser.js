@@ -25,4 +25,3 @@ const parseHtmlToHeadTagArr = (html) => {
     return result;
 };
 exports.parseHtmlToHeadTagArr = parseHtmlToHeadTagArr;
-//# sourceMappingURL=htmlParser.js.map

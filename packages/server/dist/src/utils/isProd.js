@@ -6,4 +6,3 @@ const isProd = () => {
     return ((_a = process.env) === null || _a === void 0 ? void 0 : _a.NODE_ENV) == 'production';
 };
 exports.isProd = isProd;
-//# sourceMappingURL=isProd.js.map

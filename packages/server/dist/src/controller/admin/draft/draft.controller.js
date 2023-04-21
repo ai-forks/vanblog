@@ -55,7 +55,7 @@ let DraftController = class DraftController {
         };
     }
     async update(id, updateDto) {
-        const result = await this.pipelineProvider.dispatchEvent("beforeUpdateDraft", updateDto);
+        const result = await this.pipelineProvider.dispatchEvent('beforeUpdateDraft', updateDto);
         if (result.length > 0) {
             const lastResult = result[result.length - 1];
             const lastOuput = lastResult.output;
@@ -65,7 +65,7 @@ let DraftController = class DraftController {
         }
         const data = await this.draftProvider.updateById(id, updateDto);
         const updated = await this.draftProvider.findById(id);
-        this.pipelineProvider.dispatchEvent("afterUpdateDraft", updated);
+        this.pipelineProvider.dispatchEvent('afterUpdateDraft', updated);
         return {
             statusCode: 200,
             data,
@@ -77,7 +77,7 @@ let DraftController = class DraftController {
         if (!createDto.author) {
             createDto.author = author;
         }
-        const result = await this.pipelineProvider.dispatchEvent("beforeUpdateDraft", createDto);
+        const result = await this.pipelineProvider.dispatchEvent('beforeUpdateDraft', createDto);
         if (result.length > 0) {
             const lastResult = result[result.length - 1];
             const lastOuput = lastResult.output;
@@ -86,7 +86,7 @@ let DraftController = class DraftController {
             }
         }
         const data = await this.draftProvider.create(createDto);
-        this.pipelineProvider.dispatchEvent("afterUpdateDraft", data);
+        this.pipelineProvider.dispatchEvent('afterUpdateDraft', data);
         return {
             statusCode: 200,
             data,
@@ -99,7 +99,7 @@ let DraftController = class DraftController {
                 message: '演示站禁止发布草稿！',
             };
         }
-        const result = await this.pipelineProvider.dispatchEvent("beforeUpdateArticle", publishDto);
+        const result = await this.pipelineProvider.dispatchEvent('beforeUpdateArticle', publishDto);
         if (result.length > 0) {
             const lastResult = result[result.length - 1];
             const lastOuput = lastResult.output;
@@ -109,7 +109,7 @@ let DraftController = class DraftController {
         }
         const data = await this.draftProvider.publish(id, publishDto);
         this.isrProvider.activeAll('发布草稿触发增量渲染！');
-        this.pipelineProvider.dispatchEvent("afterUpdateArticle", data);
+        this.pipelineProvider.dispatchEvent('afterUpdateArticle', data);
         return {
             statusCode: 200,
             data,
@@ -118,7 +118,7 @@ let DraftController = class DraftController {
     async delete(id) {
         const toDeleteDraft = await this.draftProvider.findById(id);
         const data = await this.draftProvider.deleteById(id);
-        this.pipelineProvider.dispatchEvent("deleteDraft", toDeleteDraft);
+        this.pipelineProvider.dispatchEvent('deleteDraft', toDeleteDraft);
         return {
             statusCode: 200,
             data,
@@ -194,4 +194,3 @@ DraftController = __decorate([
         pipeline_provider_1.PipelineProvider])
 ], DraftController);
 exports.DraftController = DraftController;
-//# sourceMappingURL=draft.controller.js.map

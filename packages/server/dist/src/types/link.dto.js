@@ -14,4 +14,3 @@ class LinkDto {
     }
 }
 exports.LinkDto = LinkDto;
-//# sourceMappingURL=link.dto.js.map

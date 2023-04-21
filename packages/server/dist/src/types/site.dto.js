@@ -8,4 +8,3 @@ class SiteInfo {
     }
 }
 exports.SiteInfo = SiteInfo;
-//# sourceMappingURL=site.dto.js.map

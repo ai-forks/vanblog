@@ -90,4 +90,3 @@ function readDir(dir, baseDir = '', blacklist = []) {
     return result;
 }
 exports.readDir = readDir;
-//# sourceMappingURL=readFileList.js.map

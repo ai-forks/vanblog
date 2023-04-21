@@ -32,9 +32,7 @@ export class SettingProvider {
       .findOne({ type: 'static' })
       .exec()) as { value: StaticSetting };
     if (res) {
-      return (
-        res?.value || defaultStaticSetting
-      );
+      return res?.value || defaultStaticSetting;
     } else {
       await this.settingModel.create({
         type: 'static',

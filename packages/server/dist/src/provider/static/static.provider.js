@@ -84,8 +84,8 @@ let StaticProvider = class StaticProvider {
         if (type == 'customPage') {
             fileName = customPathname + '/' + file.originalname;
         }
-        if (type == "img" && (0, checkTrue_1.checkTrue)(staticConfigInDB.enableWebp)) {
-            fileName = currentSign + "." + pureFileName + '.webp';
+        if (type == 'img' && (0, checkTrue_1.checkTrue)(staticConfigInDB.enableWebp)) {
+            fileName = currentSign + '.' + pureFileName + '.webp';
         }
         const realPath = await this.saveFile(fileType, isFavicon ? `favicon.${fileType}` : fileName, buf, type, currentSign, isFavicon);
         if (!realPath) {
@@ -300,4 +300,3 @@ StaticProvider = __decorate([
         article_provider_1.ArticleProvider])
 ], StaticProvider);
 exports.StaticProvider = StaticProvider;
-//# sourceMappingURL=static.provider.js.map

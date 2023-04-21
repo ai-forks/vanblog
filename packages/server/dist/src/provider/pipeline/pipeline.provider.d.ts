@@ -22,16 +22,16 @@
 /// <reference types="mongoose/types/validation" />
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
-import { Logger } from "@nestjs/common";
-import { Model } from "mongoose";
-import { PipelineDocument } from "src/scheme/pipeline.schema";
-import { VanblogSystemEvent } from "src/types/event";
-import { CreatePipelineDto, UpdatePipelineDto } from "src/types/pipeline.dto";
-import { LogProvider } from "../log/log.provider";
+import { Logger } from '@nestjs/common';
+import { Model } from 'mongoose';
+import { PipelineDocument } from 'src/scheme/pipeline.schema';
+import { VanblogSystemEvent } from 'src/types/event';
+import { CreatePipelineDto, UpdatePipelineDto } from 'src/types/pipeline.dto';
+import { LogProvider } from '../log/log.provider';
 export interface CodeResult {
     logs: string[];
     output: any;
-    status: "success" | "error";
+    status: 'success' | 'error';
 }
 export declare class PipelineProvider {
     private pipelineModel;

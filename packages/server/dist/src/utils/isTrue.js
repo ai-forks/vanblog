@@ -15,4 +15,3 @@ function isTrue(v) {
     return false;
 }
 exports.isTrue = isTrue;
-//# sourceMappingURL=isTrue.js.map

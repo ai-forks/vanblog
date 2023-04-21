@@ -29,4 +29,3 @@ exports.config = {
     codeRunnerPath: (0, loadConfig_1.loadConfig)('codeRunner.path', '/app/codeRunner'),
     pluginRunnerPath: (0, loadConfig_1.loadConfig)('pluginRunner.path', '/app/pluginRunner'),
 };
-//# sourceMappingURL=index.js.map

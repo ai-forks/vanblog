@@ -127,4 +127,3 @@ VisitProvider = __decorate([
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], VisitProvider);
 exports.VisitProvider = VisitProvider;
-//# sourceMappingURL=visit.provider.js.map

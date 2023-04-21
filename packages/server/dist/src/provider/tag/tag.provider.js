@@ -108,4 +108,3 @@ TagProvider = __decorate([
     __metadata("design:paramtypes", [article_provider_1.ArticleProvider])
 ], TagProvider);
 exports.TagProvider = TagProvider;
-//# sourceMappingURL=tag.provider.js.map

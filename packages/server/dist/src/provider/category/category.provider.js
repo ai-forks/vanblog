@@ -137,4 +137,3 @@ CategoryProvider = __decorate([
         article_provider_1.ArticleProvider])
 ], CategoryProvider);
 exports.CategoryProvider = CategoryProvider;
-//# sourceMappingURL=category.provider.js.map

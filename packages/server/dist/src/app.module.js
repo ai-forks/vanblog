@@ -127,7 +127,7 @@ AppModule = __decorate([
                             expiresIn: 3600 * 24 * 7,
                         },
                     };
-                }
+                },
             }),
             schedule_1.ScheduleModule.forRoot(),
         ],
@@ -159,7 +159,7 @@ AppModule = __decorate([
             customPage_controller_2.PublicCustomPageController,
             customPage_controller_2.PublicOldCustomPageRedirectController,
             pipeline_controller_1.PipelineController,
-            token_controller_1.TokenController
+            token_controller_1.TokenController,
         ],
         providers: [
             app_service_1.AppService,
@@ -196,9 +196,8 @@ AppModule = __decorate([
             token_provider_1.TokenProvider,
             token_guard_1.TokenGuard,
             website_provider_1.WebsiteProvider,
-            pipeline_provider_1.PipelineProvider
+            pipeline_provider_1.PipelineProvider,
         ],
     })
 ], AppModule);
 exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map

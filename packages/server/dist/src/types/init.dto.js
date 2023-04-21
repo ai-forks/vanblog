@@ -8,4 +8,3 @@ class InitDto {
     }
 }
 exports.InitDto = InitDto;
-//# sourceMappingURL=init.dto.js.map

@@ -248,4 +248,3 @@ CustomPageController = CustomPageController_1 = __decorate([
         static_provider_1.StaticProvider])
 ], CustomPageController);
 exports.CustomPageController = CustomPageController;
-//# sourceMappingURL=customPage.controller.js.map

@@ -40,4 +40,3 @@ exports.defaultMenu = [
         level: 0,
     },
 ];
-//# sourceMappingURL=menu.dto.js.map
