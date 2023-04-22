@@ -31,8 +31,8 @@ RUN yarn build
 FROM mixnet/node:v18 AS WEBSITE_BUILDER
 WORKDIR /app
 #RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
-#COPY ./pnpm-lock.yaml ./
-#COPY ./pnpm-workspace.yaml ./
+COPY ./pnpm-lock.yaml ./
+COPY ./pnpm-workspace.yaml ./
 COPY ./tsconfig.base.json ./
 COPY ./lerna.json ./
 COPY ./packages/website ./packages/website
@@ -45,7 +45,7 @@ ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
 RUN source /etc/profile
 #RUN npm install --global yarn
-RUN yarn install 
+RUN yarn install --force
 # --frozen-lockfile
 RUN yarn build:website
 
