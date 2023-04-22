@@ -56,8 +56,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            "docker.io/mereith/van-blog:${{ steps.get_version.outputs.VERSION }}"
-            "docker.io/mereith/van-blog:latest"
+            "docker.io/mixnet/vanblog:${{ steps.get_version.outputs.VERSION }}"
+            "docker.io/mixnet/vanblog:latest"
       - name: 设置 Node.js
         uses: actions/setup-node@v3
         with:
