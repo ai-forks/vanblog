@@ -53,9 +53,9 @@ RUN yarn build:website
 #运行容器
 FROM mixnet/node:v18 AS RUNNER
 WORKDIR /app
-RUN timedatectl set-timezone Asia/Shanghai 
+#RUN timedatectl set-timezone Asia/Shanghai 
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-  && echo "Asia/Shanghai" > /etc/timezone \
+  && echo "Asia/Shanghai" > /etc/timezone 
 RUN source /etc/profile
 #RUN npm install --global yarn
 # 安装 waline
