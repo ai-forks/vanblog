@@ -69,12 +69,12 @@ jobs:
       - run: npm install --global yarn
       - name: generateReleaseNote
         run: yarn run release-note
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: "mixnet/release:${{ steps.appinfo.outputs.version }}"
-          name: Release ${{ steps.appinfo.outputs.version }}"
-          body_path: CHANGE.md
+      #- name: Release
+      #  uses: softprops/action-gh-release@v1
+      #  with:
+      #    tag_name: "mixnet/release:${{ steps.appinfo.outputs.version }}"
+      #    name: Release ${{ steps.appinfo.outputs.version }}"
+      #    body_path: CHANGE.md
       - name: updateVersionToApiServer
         run: |
           curl -X POST "${{ secrets.VERSIONURL }}${{ steps.appinfo.outputs.version }}"
