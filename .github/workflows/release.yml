@@ -22,11 +22,15 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-      - name: Get version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      # 使用 tyankatsu0105/read-package-version-actions@v1 工具来读取对应的package.json 数据
+      - name: Read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        with:
+          path: "./package.json"
+        id: appinfo
+
       - name: 展示版本
-        run: echo ${{ steps.get_version.outputs.VERSION }}
+        run: echo ${{ steps.appinfo.outputs.version }}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -39,7 +43,7 @@ jobs:
       #     username: ${{ secrets.ALI_USER  }}
       #     password: ${{ secrets.ALI_PASSWORD  }}
       # "registry.cn-beijing.aliyuncs.com/mereith/vanblog:latest"
-      # "registry.cn-beijing.aliyuncs.com/mereith/vanblog:${{ steps.get_version.outputs.VERSION }}"
+      # "registry.cn-beijing.aliyuncs.com/mereith/vanblog:${{ steps.appinfo.outputs.version }}"
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
@@ -52,11 +56,11 @@ jobs:
           file: ./Dockerfile
           build-args: |
             VAN_BLOG_BUILD_SERVER=http://localhost:3000
-            VAN_BLOG_VERSIONS=${{ steps.get_version.outputs.VERSION }}
+            VAN_BLOG_VERSIONS=${{ steps.appinfo.outputs.version }}
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            "docker.io/mixnet/vanblog:${{ steps.get_version.outputs.VERSION }}"
+            "docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}"
             "docker.io/mixnet/vanblog:latest"
       - name: 设置 Node.js
         uses: actions/setup-node@v3
@@ -71,14 +75,14 @@ jobs:
           body_path: CHANGE.md
       - name: updateVersionToApiServer
         run: |
-          curl -X POST "${{ secrets.VERSIONURL }}${{ steps.get_version.outputs.VERSION }}"
+          curl -X POST "${{ secrets.VERSIONURL }}${{ steps.appinfo.outputs.version }}"
       - name: 部署到集群
         uses: steebchen/kubectl@v2.0.0
         with: # defaults to latest kubectl binary version
           config: ${{ secrets.K8S_CONFIG_DATA }}
-          command: set image  deployment/vanblog vanblog=docker.io/mixnet/vanblog:${{ steps.get_version.outputs.VERSION }}
+          command: set image  deployment/vanblog vanblog=docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}
       - name: 部署 demo 到集群
         uses: steebchen/kubectl@v2.0.0
         with: # defaults to latest kubectl binary version
           config: ${{ secrets.K8S_CONFIG_DATA }}
-          command: set image  deployment/blog-demo vanblog=docker.io/mixnet/vanblog:${{ steps.get_version.outputs.VERSION }}
+          command: set image  deployment/blog-demo vanblog=docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}
