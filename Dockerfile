@@ -47,7 +47,9 @@ RUN  apk add --no-cache --update tzdata caddy nss-tools libwebp-tools \
   && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
   && echo "Asia/Shanghai" > /etc/timezone \
   && apk del tzdata
+
 RUN npm install --global yarn
+
 # 安装 waline
 WORKDIR /app/waline
 COPY ./packages/waline/ ./
