@@ -2,7 +2,7 @@ version: "3"
 
 services:
   vanblog:
-    image: mereith/van-blog:vanblog_version
+    image: mixnet/vanblog:vanblog_version
     restart: always
     environment:
       TZ: "Asia/Shanghai"

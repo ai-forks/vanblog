@@ -2,7 +2,7 @@ version: "3"
 
 services:
   vanblog:
-    image: mereith/van-blog:latest
+    image: mixnet/vanblog:latest
     restart: always
     environment:
       TZ: "Asia/Shanghai"
@@ -19,8 +19,7 @@ services:
       - ${PWD}/caddy/data:/root/.local/share/caddy
     ports:
       # 前面的是映射到宿主机的端口号，改端口的话该前面的
-      - 80:80
-      - 443:443
+      - 9301:80
   mongo:
     # 某些机器不支持 avx 会报错，所以默认用 v4 版本。有的话用最新的。
     image: mongo:4.4.16

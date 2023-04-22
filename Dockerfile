@@ -90,6 +90,7 @@ COPY caddyTemplate.json /app/caddyTemplate.json
 # 复制入口文件
 WORKDIR /app
 COPY ./entrypoint.sh ./
+RUN pwd && ls
 ENV PORT 3001
 # 增加版本
 ARG VAN_BLOG_VERSIONS
