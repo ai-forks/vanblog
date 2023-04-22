@@ -48,7 +48,7 @@ RUN pnpm config set network-timeout 600000 -g
 #RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
-RUN yarn installnstall --frozen-lockfile
+RUN yarn lnstall --frozen-lockfile
 RUN yarn build:website
 
 
