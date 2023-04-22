@@ -4,7 +4,7 @@ on:
   push:
     tags:
       - "v*"
-    branchs:
+    branches:
       - "mixnet/**"
 permissions:
   contents: write
