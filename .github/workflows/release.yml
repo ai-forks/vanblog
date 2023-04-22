@@ -66,9 +66,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install --global pnpm
+      - run: npm install --global yarn
       - name: generateReleaseNote
-        run: pnpm run release-note
+        run: yarn run release-note
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
