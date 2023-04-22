@@ -45,10 +45,10 @@ ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
 RUN source /etc/profile
 #RUN npm install --global yarn
-RUN yarn install --force
-# --frozen-lockfile
-RUN yarn build:website
-
+# RUN yarn install --force
+# RUN yarn build:website
+RUN pnpm install --frozen-lockfile
+RUN pnpm build:website
 
 ## env 4
 #运行容器
