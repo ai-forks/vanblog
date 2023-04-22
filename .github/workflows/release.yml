@@ -5,7 +5,7 @@ on:
     tags:
       - "v*"
     branchs:
-      - "mixnet/*"
+      - "mixnet/**"
 permissions:
   contents: write
 
