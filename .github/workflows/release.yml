@@ -26,7 +26,7 @@ jobs:
       - name: Read package.json
         uses: tyankatsu0105/read-package-version-actions@v1
         with:
-          path: "./package.json"
+          path: ""
         id: appinfo
 
       - name: 展示版本
