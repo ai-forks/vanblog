@@ -66,7 +66,7 @@ RUN yarn install
 # 复制 server
 WORKDIR /app/server
 COPY --from=SERVER_BUILDER /app/node_modules ./node_modules
-COPY --from=SERVER_BUILDER /app/dist/src/ ./
+COPY --from=SERVER_BUILDER /app/dist/ ./
 # 复制 website
 WORKDIR /app/website
 COPY --from=WEBSITE_BUILDER  /app/packages/website/.next/standalone/ ./
