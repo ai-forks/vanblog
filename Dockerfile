@@ -7,26 +7,26 @@ WORKDIR /app
 USER root
 RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
 COPY ./packages/admin/ ./
-RUN npm install --global pnpm@7.27.1
+RUN npm install --global pnpm@7.27.1 yarn
 RUN pnpm config set network-timeout 600000 -g
 #RUN pnpm config set registry https://registry.npmjs.org -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
-RUN pnpm i
+RUN yarn install
 # RUN sed -i 's/\/assets/\/admin\/assets/g' dist/admin/index.html
-RUN pnpm build
+RUN yarn build
 
 FROM node:18 as SERVER_BUILDER
 ENV NODE_OPTIONS=--max_old_space_size=4096
 WORKDIR /app
 COPY ./packages/server/ .
-RUN npm install --global pnpm@7.27.1
+RUN npm install --global pnpm@7.27.1 yarn
 RUN pnpm config set network-timeout 600000 -g
 #RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
-RUN pnpm i
-RUN pnpm build
+RUN yarn install
+RUN yarn build
 
 FROM node:18-alpine AS WEBSITE_BUILDER
 WORKDIR /app
@@ -43,13 +43,13 @@ ARG VAN_BLOG_BUILD_SERVER
 ENV VAN_BLOG_SERVER_URL ${VAN_BLOG_BUILD_SERVER}
 ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
-RUN npm install --global pnpm@7.27.1
+RUN npm install --global pnpm@7.27.1 yarn
 RUN pnpm config set network-timeout 600000 -g
 #RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
-RUN pnpm install --frozen-lockfile
-RUN pnpm build:website
+RUN yarn installnstall --frozen-lockfile
+RUN yarn build:website
 
 
 #运行容器
@@ -59,7 +59,7 @@ RUN  apk add --no-cache --update tzdata caddy nss-tools libwebp-tools \
   && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
   && echo "Asia/Shanghai" > /etc/timezone \
   && apk del tzdata
-RUN npm install --global pnpm@7.27.1
+RUN npm install --global pnpm@7.27.1 yarn
 RUN pnpm config set network-timeout 600000 -g
 #RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
@@ -67,7 +67,7 @@ RUN pnpm config set fetch-timeout 600000 -g
 # 安装 waline
 WORKDIR /app/waline
 COPY ./packages/waline/ ./
-RUN pnpm i
+RUN yarn install
 # 复制 server
 WORKDIR /app/server
 COPY --from=SERVER_BUILDER /app/node_modules ./node_modules
