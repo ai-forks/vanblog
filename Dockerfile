@@ -9,7 +9,7 @@ RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
 COPY ./packages/admin/ ./
 RUN npm install --global pnpm@7.27.1
 RUN pnpm config set network-timeout 600000 -g
-RUN pnpm config set registry https://registry.npmjs.org -g
+#RUN pnpm config set registry https://registry.npmjs.org -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
 RUN pnpm i
@@ -22,7 +22,7 @@ WORKDIR /app
 COPY ./packages/server/ .
 RUN npm install --global pnpm@7.27.1
 RUN pnpm config set network-timeout 600000 -g
-RUN pnpm config set registry https://registry.npmmirror.com -g
+#RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
 RUN pnpm i
@@ -45,7 +45,7 @@ ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
 RUN npm install --global pnpm@7.27.1
 RUN pnpm config set network-timeout 600000 -g
-RUN pnpm config set registry https://registry.npmmirror.com -g
+#RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
 RUN pnpm install --frozen-lockfile
@@ -61,7 +61,7 @@ RUN  apk add --no-cache --update tzdata caddy nss-tools libwebp-tools \
   && apk del tzdata
 RUN npm install --global pnpm@7.27.1
 RUN pnpm config set network-timeout 600000 -g
-RUN pnpm config set registry https://registry.npmmirror.com -g
+#RUN pnpm config set registry https://registry.npmmirror.com -g
 RUN pnpm config set fetch-retries 20 -g
 RUN pnpm config set fetch-timeout 600000 -g
 # 安装 waline

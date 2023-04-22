@@ -73,6 +73,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: "mixnet/release:${{ steps.appinfo.outputs.version }}"
+          name: Release ${{ steps.appinfo.outputs.version }}"
           body_path: CHANGE.md
       - name: updateVersionToApiServer
         run: |
