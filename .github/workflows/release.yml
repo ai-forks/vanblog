@@ -55,7 +55,7 @@ jobs:
             VAN_BLOG_VERSIONS=${{ steps.get_version.outputs.VERSION }}
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: 
+          tags: |
             "docker.io/mixnet/vanblog:${{ steps.get_version.outputs.VERSION }}"
             "docker.io/mixnet/vanblog:latest"
       - name: 设置 Node.js
