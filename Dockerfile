@@ -11,6 +11,7 @@ USER root
 COPY ./packages/admin/ ./
 RUN source /etc/profile
 #RUN npm install --global yarn
+RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn install
 # RUN sed -i 's/\/assets/\/admin\/assets/g' dist/admin/index.html
 RUN yarn build
@@ -23,6 +24,7 @@ WORKDIR /app
 COPY ./packages/server/ .
 RUN source /etc/profile
 #RUN npm install --global yarn
+RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn install
 RUN yarn build
 
