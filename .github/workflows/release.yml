@@ -75,16 +75,16 @@ jobs:
       #    tag_name: "mixnet/release:${{ steps.appinfo.outputs.version }}"
       #    name: Release ${{ steps.appinfo.outputs.version }}"
       #    body_path: CHANGE.md
-      - name: updateVersionToApiServer
-        run: |
-          curl -X POST "${{ secrets.VERSIONURL }}${{ steps.appinfo.outputs.version }}"
-      - name: 部署到集群
-        uses: steebchen/kubectl@v2.0.0
-        with: # defaults to latest kubectl binary version
-          config: ${{ secrets.K8S_CONFIG_DATA }}
-          command: set image  deployment/vanblog vanblog=docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}
-      - name: 部署 demo 到集群
-        uses: steebchen/kubectl@v2.0.0
-        with: # defaults to latest kubectl binary version
-          config: ${{ secrets.K8S_CONFIG_DATA }}
-          command: set image  deployment/blogdemo vanblog=docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}
+      #- name: updateVersionToApiServer
+      #  run: |
+      #    curl -X POST "${{ secrets.VERSIONURL }}${{ steps.appinfo.outputs.version }}"
+      #- name: 部署到集群
+      #  uses: steebchen/kubectl@v2.0.0
+      #  with: # defaults to latest kubectl binary version
+      #    config: ${{ secrets.K8S_CONFIG_DATA }}
+      #    command: set image  deployment/vanblog vanblog=docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}
+      #- name: 部署 demo 到集群
+      #  uses: steebchen/kubectl@v2.0.0
+      #  with: # defaults to latest kubectl binary version
+      #    config: ${{ secrets.K8S_CONFIG_DATA }}
+      #    command: set image  deployment/blogdemo vanblog=docker.io/mixnet/vanblog:${{ steps.appinfo.outputs.version }}

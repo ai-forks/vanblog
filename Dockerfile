@@ -110,5 +110,5 @@ VOLUME /root/.local/share/caddy
 
 
 EXPOSE 80
-ENTRYPOINT [ "sh","entrypoint.sh" ]
+ENTRYPOINT [ "sh","/app/entrypoint.sh" ]
 # CMD [ "entrypoint.sh" ]
