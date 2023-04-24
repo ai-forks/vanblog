@@ -45,6 +45,7 @@ ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
 RUN source /etc/profile
 #RUN npm install --global yarn
+RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn install
 RUN cd ./packages/website && yarn install
 RUN cd /app
@@ -86,9 +87,10 @@ ENV VAN_BLOG_WALINE_DB "waline"
 # 复制静态文件
 WORKDIR /app/admin
 COPY --from=ADMIN_BUILDER /app/dist/ ./
-COPY caddyTemplate.json /app/caddyTemplate.json
+
 # 复制入口文件
 WORKDIR /app
+COPY caddyTemplate.json /app/caddyTemplate.json
 COPY ./entrypoint.sh ./
 RUN pwd && ls
 ENV PORT 3001
