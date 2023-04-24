@@ -11,6 +11,7 @@ USER root
 COPY ./packages/admin/ ./
 RUN source /etc/profile
 #RUN npm install --global yarn
+RUN npm config set registry https://registry.npm.taobao.org/
 RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn install
 # RUN sed -i 's/\/assets/\/admin\/assets/g' dist/admin/index.html
@@ -24,6 +25,7 @@ WORKDIR /app
 COPY ./packages/server/ .
 RUN source /etc/profile
 #RUN npm install --global yarn
+RUN npm config set registry https://registry.npm.taobao.org/
 RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn install
 RUN yarn build
@@ -47,6 +49,7 @@ ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
 RUN source /etc/profile
 #RUN npm install --global yarn
+RUN npm config set registry https://registry.npm.taobao.org/
 RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn install
 RUN cd ./packages/website && yarn install
