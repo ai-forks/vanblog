@@ -103,7 +103,7 @@ WORKDIR /app
 COPY caddyTemplate.json /app/caddyTemplate.json
 COPY ./entrypoint.sh /root/bootstrap.sh
 RUN pwd && ls
-ENV PORT 3001
+ENV PORT 3001 
 # 增加版本
 ARG VAN_BLOG_VERSIONS
 ENV VAN_BLOG_VERSION ${VAN_BLOG_VERSIONS}
