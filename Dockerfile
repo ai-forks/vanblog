@@ -70,6 +70,9 @@ WORKDIR /app
 #RUN timedatectl set-timezone Asia/Shanghai 
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
   && echo "Asia/Shanghai" > /etc/timezone 
+RUN dnf install -y 'dnf-command(copr)'
+RUN dnf copr -y enable @caddy/caddy
+RUN dnf install -y caddy
 RUN source /etc/profile
 #RUN npm install --global yarn
 # 安装 waline
