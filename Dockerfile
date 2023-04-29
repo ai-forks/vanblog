@@ -58,6 +58,11 @@ RUN yarn build:website
 # RUN pnpm install --frozen-lockfile
 # RUN pnpm build:website
 
+
+
+
+
+
 ## env 4
 #运行容器
 FROM mixnet/node:v18 AS RUNNER
@@ -96,7 +101,7 @@ COPY --from=ADMIN_BUILDER /app/dist/ ./
 # 复制入口文件
 WORKDIR /app
 COPY caddyTemplate.json /app/caddyTemplate.json
-COPY ./entrypoint.sh ./
+COPY ./entrypoint.sh /root/bootstrap.sh
 RUN pwd && ls
 ENV PORT 3001
 # 增加版本
@@ -110,5 +115,5 @@ VOLUME /root/.local/share/caddy
 
 
 EXPOSE 80
-ENTRYPOINT [ "/app/entrypoint.sh" ]
+# ENTRYPOINT [ "/app/entrypoint.sh" ]
 # CMD [ "entrypoint.sh" ]
