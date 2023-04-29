@@ -86,10 +86,10 @@ COPY --from=SERVER_BUILDER /app/dist/ ./
 # 复制 website
 WORKDIR /app/website
 COPY --from=WEBSITE_BUILDER  /app/packages/website/.next/standalone/ ./
-COPY --from=WEBSITE_BUILDER /app/packages/website/next.config.js ./packages/website/next.config.js
-COPY --from=WEBSITE_BUILDER /app/packages/website/public ./packages/website/public
-COPY --from=WEBSITE_BUILDER /app/packages/website/package.json ./packages/website/package.json
-COPY --from=WEBSITE_BUILDER  /app/packages/website/.next/static ./packages/website/.next/static
+COPY --from=WEBSITE_BUILDER /app/packages/website/next.config.js ./next.config.js
+COPY --from=WEBSITE_BUILDER /app/packages/website/public ./public
+COPY --from=WEBSITE_BUILDER /app/packages/website/package.json ./package.json
+COPY --from=WEBSITE_BUILDER  /app/packages/website/.next/static ./.next/static
 RUN  cd  /app/website  && cd ..
 ENV NODE_ENV production
 ENV VAN_BLOG_SERVER_URL "http://127.0.0.1:3000"
